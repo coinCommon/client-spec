@@ -128,6 +128,7 @@ $breakpoint_sm: 576px;
                 line-height: 1.7em;
                 @media only screen and (max-width: $breakpoint_md) {
                     line-height: 1.6em;
+                    bottom: 10px;
                 }
                 label {
                     font-size: 14px;
@@ -153,6 +154,7 @@ $breakpoint_sm: 576px;
                     @media only screen and (max-width: $breakpoint_md) {
                         width: 150px;
                         height: 30px;
+                        margin-top: 3px;
                     }
                     &:hover {
                         //transform: scale(1.1);
