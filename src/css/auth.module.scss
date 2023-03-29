@@ -1,0 +1,157 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+
+
+.section_auth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+
+    .auth_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 2px 2px 4px 1px #cccccc;
+            .auth_label, .auth_input {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #999999;
+                position: relative;
+                a {
+                    text-decoration: none;
+                    color: #999999;
+                    font-family: $fontArsenal;
+                    font-size: 24px;
+                    transition: .3s;
+                    &:hover{
+                        color: orange;
+                    }
+                }
+                .auth_show_password {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 60%;
+                    right: 5px;
+                }
+            }
+
+            .auth_flex_item {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                color: #999999;
+                a {
+                    color: orange;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    background: none;
+                    color: orange;
+                    height: auto;
+                    margin: 0;
+                    &:hover {
+                        background: none;
+                        color: orange;
+                    }
+                }
+            }
+
+            .auth_help {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                a {
+                    font-size: 14px;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    color: orange;
+                }
+            }
+        }
+
+        label {
+            font-family: $fontArsenal;
+            font-size: 24px;
+        }
+        input {
+            width: 350px;
+            height: 30px;
+            margin-top: 30px;
+            font-size: 14px;
+            font-family: $fontComfort;
+            border: none;
+            outline: none;
+            box-shadow: 0 1px 0 0 #cccccc;
+            color: #333;
+            &::-webkit-input-placeholder {
+                color: #cccccc;
+            }
+        }
+        button {
+            width: 100%;
+            height: 35px;
+            margin-top: 30px;
+            border: none;
+            border-radius: 5px;
+            background: #444;
+            color: #ffee00;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: $fontArsenal;
+            transition: .3s;
+            font-weight: bold;
+            &:hover {
+                color: #444;
+                background: #ffee00;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+

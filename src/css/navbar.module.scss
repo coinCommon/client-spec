@@ -1,0 +1,1161 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+
+.button-basket-card {
+    width: 100%;
+    height: 30px;
+    background: none;
+    font-family: $font;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 5px 0;
+}
+.line-height {
+    line-height: 1.3em;
+    @media only screen and (max-width: $breakpoint_md) {
+        line-height: 1.2em;
+    }
+}
+.display-none {
+    display: none;
+}
+
+
+
+.catalog_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    //padding-top: 10px;
+    @media only screen and (max-width: $breakpoint_md) {
+
+    }
+    .logo_img {
+        display: none;
+        img {
+            width: 160px;
+            margin: 0;
+            padding: 0;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            display: block;
+        }
+    }
+
+
+    .catalog_line_button {
+        @extend .flex_space;
+        button {
+            @extend .flex_center;
+            font-family: $font;
+            font-size: 14px;
+            font-weight: bold;
+            color: $yellow;
+            width: 180px;
+            height: 42px;
+            background: #444;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: $transition;
+            border: none;
+            &:after {
+                content: "Каталог товаров";
+                @media only screen and (max-width: $breakpoint_xl) {
+                    content: "";
+                }
+            }
+            @media only screen and (max-width: $breakpoint_xxll) {
+
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                width: 160px;
+                height: 38px;
+                font-size: 12px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                width: auto;
+                height: auto;
+                padding: 10px 15px;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                padding: 5px 10px;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            &:hover {
+                color: #444;
+                background: $yellow;
+            }
+        }
+        .navbar__icon__button {
+            i {
+                font-size: 20px;
+                padding: 0 10px 0 0;
+                margin-top: 3px;
+                @media only screen and (max-width: $breakpoint_xl) {
+                    padding: 0;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    font-size: 20px;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+            }
+        }
+    }
+
+    .catalog_line_search {
+        @extend .flex_start;
+        //display: flex;
+        //justify-content: flex-start;
+        //align-items: center;
+        width: 100%;
+        @media only screen and (max-width: $breakpoint_xxll) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+            width: 80%;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            justify-content: space-between;
+            width: auto;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+
+        }
+        form {
+            width: 100%;
+            position: relative;
+            margin-left: 130px;
+            @media only screen and (max-width: $breakpoint_xxll) {
+
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-left: 30px;
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                margin-left: 0;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            input,  button {
+                border: none;
+                outline: none;
+            }
+            input {
+                width: 100%;
+                height: 42px;
+                padding: 0;
+                font-family: $fontComfort;
+                background: #fff;
+                border-bottom: solid 1px $shadow;
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    display: none;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+            }
+            button {
+                height: 26px;
+                width: 26px;
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                cursor: pointer;
+                background: none;
+                color: #cccccc;
+                @media only screen and (max-width: $breakpoint_md) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    font-size: 20px;
+                    color: #444;
+                }
+            }
+            .search_display_none {
+                position: absolute;
+                padding: 0;
+                width: 100%;
+                height: 0;
+                background: rgba(255, 255, 255, 255);
+                z-index: 999;
+                transition: $transition;
+                //border: solid 1px $shadow;
+                @media only screen and (max-width: $breakpoint_md) {
+                    display: none;
+                }
+            }
+            .search_border {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                z-index: 100;
+                border-bottom: solid 1px #fff;
+                width: 100%;
+                cursor: pointer;
+                padding: 5px 0;
+                &:hover {
+                    border-bottom: solid 1px #444;
+                }
+                .search_a {
+                    cursor: pointer;
+                    display: block;
+                    text-decoration: none;
+                    color: #333;
+                    padding: 5px 5px;
+
+                }
+
+                .search_div {
+                    cursor: pointer;
+                    display: block;
+                    text-decoration: none;
+                    color: #333;
+                    padding: 5px 5px;
+                }
+            }
+
+        }
+    }
+    .catalog_line_menu {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        width: 60%;
+        @media only screen and (max-width: $breakpoint_xxll) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            display: none;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+
+        }
+        button {
+            font-size: 14px;
+            text-decoration: none;
+            color: #333333;
+            margin-left: 30px;
+            transition: $transition;
+            background: none;
+            border: none;
+            cursor: pointer;
+            @media only screen and (max-width: $breakpoint_xxll) {
+
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-left: 20px;
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-left: 15px;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            &:hover i, &:hover {
+                color: $yellow;
+            }
+            &:hover .basket_item {
+                background: #333;
+            }
+        }
+        .navbar__icon {
+            @extend .flex_center;
+            padding-bottom: 5px;
+            i {
+                font-size: 20px;
+                color: #444444;
+                transition: $transition;
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    font-size: 16px;
+                }
+            }
+        }
+        .basket_item {
+            position: absolute;
+            right: 1%;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: $yellow;
+            color: #fff;
+            transition: 1s;
+            @media only screen and (max-width: $breakpoint_xxll) {
+
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                right: 2%;
+                top: -5px;
+                width: 15px;
+                height: 15px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                right: 2%;
+                top: -5px;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    display: block;
+
+    .position_absolute_search_mobile_one {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 1);
+        display: none;
+        .position_relative_search_mobile {
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            @media only screen and (max-width: $breakpoint_md) {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+            .position_absolute_search_mobile {
+                opacity: 0;
+                visibility: hidden;
+                margin-top: 10px;
+                padding: 10px 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 1);
+                z-index: 999;
+                transition: 0.3s;
+                box-sizing: border-box;
+                .container {
+                    position: relative;
+                    .search_mobile_input {
+                        border: none;
+                        outline: none;
+                        width: 90%;
+                        border-bottom: solid 2px #cccccc;
+                        margin: 10px 0;
+                        font-size: 14px;
+                        font-family: $fontComfort;
+                        background: #fff;
+                        position: relative;
+                        padding: 10px 0 5px 0;
+                        &:focus {
+                            border-bottom: solid 2px orange;
+                        }
+                    }
+                    .search_border {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: relative;
+                        z-index: 100;
+                        border-bottom: solid 1px #e1e1e1;
+                        width: 100%;
+                        cursor: pointer;
+                        .search_a {
+                            cursor: pointer;
+                            display: block;
+                            text-decoration: none;
+                            color: #333;
+                            padding: 15px 5px;
+                        }
+
+                        .search_div {
+                            cursor: pointer;
+                            display: block;
+                            text-decoration: none;
+                            color: #333;
+                            padding: 15px 5px;
+                        }
+                    }
+                    button {
+                        border: none;
+                        outline: none;
+                        height: 26px;
+                        width: 26px;
+                        top: 15px;
+                        right: 0;
+                        cursor: pointer;
+                        background: none;
+                        color: #cccccc;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar_justify {
+        //@extend .flex_space;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        @media only screen and (max-width: $breakpoint_md) {
+            display: none;
+        }
+        .logo_img {
+            img {
+                width: 220px;
+                height: auto;
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    width: 200px;
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    width: 180px;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+            }
+        }
+        .navbar_city {
+            width: 30%;
+            display: flex;
+            justify-content: start;
+            margin-left: 90px;
+            @media only screen and (max-width: $breakpoint_xxll) {
+
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-left: 60px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                display: none;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            a {
+                text-decoration: none;
+                color: #333;
+                @extend .flex_space;
+                cursor: pointer;
+                transition: .3s;
+                margin-right: 30px;
+                font-size: 12px;
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    margin-right: 10px;
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+            }
+            i {
+                color: $yellow;
+                font-size: 12px;
+                margin: 5px 5px;
+            }
+            span {
+                width: 150px;
+                a {
+                    width: auto;
+                    display: inline-block;
+                    &:hover:after,
+                    &:focus:after {
+                        width: 100%;
+                    }
+                    &:hover {
+                        color: #000;
+                    }
+                }
+            }
+
+        }
+        .navbar_nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            //@extend .flex_end;
+            @media only screen and (max-width: $breakpoint_xl) {
+
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                display: none;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #333;
+                cursor: pointer;
+                transition: .3s;
+                margin-left: 30px;
+                font-size: 12px;
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    margin-left: 20px;
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+                &:after, .navbar_city span a:after {
+                    display: block;
+                    content: "";
+                    height: 3px;
+                    width: 0;
+                    background-color: $yellow;
+                    transition: width 0.2s ease-in-out;
+                    @media only screen and (max-width: $breakpoint_xxll) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                        height: 2px;
+                    }
+                    @media only screen and (max-width: $breakpoint_xl) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+
+                    }
+                }
+                &:hover:after,
+                &:focus:after {
+                    width: 100%;
+                }
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+
+    .navbar_noChange {
+        @extend .catalog_line;
+        padding: 20px 0;
+    }
+
+    .navbar_change {
+        transition: $transition;
+        z-index: 888;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        background: #fff;
+        border-bottom: solid 1px #ccc;
+        //box-shadow: 0 3px 3px 0 $shadow;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-200px);
+        @extend .catalog_line;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu_bar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 1, 1, 0.7);
+    left: 0;
+    top: 0;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    .menu_bar_content {
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        left: 0;
+        top: 0;
+        background: #fff;
+        transform: translateX(-1500px);
+        @media only screen and (max-width: $breakpoint_xxll) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xl) {
+            width: 100%;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+
+        }
+        transition: $transition;
+        .menu_bar_grid {
+            display: grid;
+            grid-template-columns: 2fr 5fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 10px;
+            height: 100%;
+            @media only screen and (max-width: $breakpoint_xl) {
+
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                display: none;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+
+            }
+            .menu_bar_left {
+                height: 100%;
+                background: #fff;
+                overflow-y: scroll;
+                &::-webkit-scrollbar-track {
+                    background-color: $shadow;
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    &::-webkit-scrollbar-track {
+                        background-color: #fff;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1) !important;
+                        background-color: #fff;
+                    }
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+                a {
+                    img {
+                        padding: 20px;
+                        width: 220px;
+                    }
+                }
+                h3 {
+                    font-weight: bold;
+                    color: #333;
+                    padding: 20px 0 0 75px;
+                    font-size: 24px;
+                }
+                .menu_bar_left_nav {
+                    height: auto;
+                     ul {
+                        margin-top: 10px;
+                         li {
+                             padding: 10px 0 0 30px;
+                             display: flex;
+                             align-items: center;
+                             img {
+                                 width: 20px;
+                                 height: auto;
+                                 margin-right: 20px;
+                             }
+                             a {
+                                 text-decoration: none;
+                                 color: #333;
+                                 transition: .2s;
+                                 cursor: pointer;
+                                 &:hover {
+                                     color: $yellow;
+                                 }
+                             }
+                             i {
+                                 margin-left: 10px;
+                             }
+                         }
+                    }
+                }
+            }
+
+            .menu_bar_right {
+                position: relative;
+                nav {
+                    padding: 150px 0 0 50px;
+                    ul {
+                        display: inline-block;
+                        p {
+                            font-size: 14px;
+                            color: #333;
+                            font-weight: 600;
+                            margin-top: 5px;
+                        }
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            color: #333;
+                            transition: $transition;
+                            cursor: pointer;
+                            margin-top: 10px;
+                            &:hover {
+                                color: $yellow;
+                            }
+                        }
+                    }
+                }
+                .menu_close {
+                    svg {
+                        position: absolute;
+                        top: 3%;
+                        right: 2%;
+                        font-size: 18px;
+                        cursor: pointer;
+                        transition: .2s;
+                        color: #999999;
+                        font-weight: 500;
+                        max-width: 16px;
+                        .cls1, .cls2 {
+                            transition: .2s;
+                            fill: none;
+                            stroke: #767676;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                            stroke-width: 35px;
+                        }
+                    }
+                    &:hover .cls1, &:hover .cls2 {
+                        stroke: $yellow;
+                        fill: $yellow;
+                        transform: rotate(0);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        .menu_bar_grid_mobile {
+            display: none;
+            @media only screen and (max-width: $breakpoint_md) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-auto-rows: minmax(100px, auto);
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            .menu_bar_mobile {
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                border-bottom: solid 1px #ccc;
+                h3 {
+                    font-weight: bold;
+                    color: #333;
+                    //padding: 20px 0 0 75px;
+                    font-size: 24px;
+                    margin: 50px 0 0 20px;
+
+                }
+                .menu_bar_mobile_nav {
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 30px 0 0 0;
+                    padding: 0 2%;
+                    height: 75%;
+                    ul {
+                        box-sizing: border-box;
+                        padding: 0 10px;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        height: 100%;
+                        width: 100%;
+                        margin-top: 10px;
+                        list-style: none;
+                        @media only screen and (max-width: $breakpoint_md) {
+                            &::-webkit-scrollbar-track {
+                                background-color: #fff;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1) !important;
+                                background-color: #fff;
+                            }
+                        }
+
+                        li {
+                            border-bottom: solid 1px #eee;
+                            height: auto;
+                            //padding-bottom: 10px;
+                            padding: 5px 0;
+                            line-height: 2em;
+                            img {
+                                //display: inline-block;
+                                width: 20px;
+                                height: auto;
+                                margin-right: 20px;
+                                display: none;
+                            }
+                            a {
+                                font-size: 18px;
+                                text-decoration: none;
+                                color: #333;
+                                transition: $transition;
+                                cursor: pointer;
+                                line-height: 1.4em;
+
+                                width: 100%;
+                                overflow-wrap: break-word;  /* не поддерживает IE, Firefox; является копией word-wrap */
+                                word-wrap: break-word;
+                                word-break: keep-all;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+                                line-break: loose;  /* нет поддержки для русского языка */
+                                -webkit-hyphens: none; -ms-hyphens: none; hyphens: none;  /* значение auto не поддерживается Chrome */
+                                &:hover {
+                                    //color: $yellow;
+                                }
+                            }
+                            i {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    .brand_mobile_padding {
+                        width: 100%;
+                        .brand_mobile {
+                            width: 100%;
+
+                            .brand_mobile_div {
+                                width: 100%;
+                                display: block;
+                                word-wrap: normal;
+                                padding: 0 20px 0 20px;
+                                box-sizing: border-box;
+                                div {
+                                    cursor: pointer;
+                                    font-size: 18px;
+                                    line-height: 1.9em;
+                                    //font-style: oblique;
+
+                                    width: 100%;
+                                    overflow-wrap: break-word;  /* не поддерживает IE, Firefox; является копией word-wrap */
+                                    word-wrap: break-word;
+                                    word-break: keep-all;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+                                    line-break: loose;  /* нет поддержки для русского языка */
+                                    -webkit-hyphens: none; -ms-hyphens: none; hyphens: none;  /* значение auto не поддерживается Chrome */
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .menu_close {
+                    svg {
+                        position: absolute;
+                        top: 3%;
+                        right: 5%;
+                        font-size: 24px;
+                        cursor: pointer;
+                        transition: .2s;
+                        color: #999999;
+                        font-weight: 500;
+                        max-width: 20px;
+                        .cls1, .cls2 {
+                            transition: .2s;
+                            fill: none;
+                            stroke: #767676;
+                            stroke-linecap: round;
+                            stroke-miterlimit: 10;
+                            stroke-width: 35px;
+                        }
+                    }
+                    &:hover .cls1, &:hover .cls2 {
+                        stroke: $yellow;
+                        fill: $yellow;
+                        transform: rotate(0);
+                    }
+                }
+
+            }
+
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.navbar_fixed {
+    display: none;
+    max-height: 50px;
+    transition: $transition;
+    z-index: 888;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+    opacity: 1;
+    visibility: visible;
+    //box-shadow: 0 0 0 3px $shadow;
+    border-bottom: solid 1px #ccc;
+        @media only screen and (max-width: $breakpoint_xxll) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            display: block;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+
+        }
+        .catalog_line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+                .catalog_line_menu {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    @media only screen and (max-width: $breakpoint_xxll) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_xxl) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_xl) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+
+                    }
+                    div {
+                        button {
+                            padding: 0;
+                            margin: 0;
+                            font-size: 12px;
+                            text-decoration: none;
+                            color: #333333;
+                            transition: $transition;
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            @media only screen and (max-width: $breakpoint_xxll) {
+
+                            }
+                            @media only screen and (max-width: $breakpoint_xxl) {
+                            }
+                            @media only screen and (max-width: $breakpoint_xl) {
+
+                            }
+                            @media only screen and (max-width: $breakpoint_md) {
+
+                            }
+                            @media only screen and (max-width: $breakpoint_sm) {
+                                font-size: 10px;
+                            }
+
+                            &:hover i, &:hover {
+                                color: $yellow;
+                            }
+
+                            &:hover .basket_item {
+                                background: #333;
+                            }
+                        }
+
+                        .navbar__icon {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding-bottom: 5px;
+
+                            i {
+                                font-size: 20px;
+                                color: #444444;
+                                transition: $transition;
+                                @media only screen and (max-width: $breakpoint_xxll) {
+
+                                }
+                                @media only screen and (max-width: $breakpoint_xxl) {
+                                    font-size: 16px;
+                                }
+                                @media only screen and (max-width: $breakpoint_xl) {
+
+                                }
+                                @media only screen and (max-width: $breakpoint_md) {
+                                }
+                                @media only screen and (max-width: $breakpoint_sm) {
+
+                                }
+                            }
+                        }
+                    }
+                        .basket_item {
+                            position: absolute;
+                            right: 1%;
+                            top: 0;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            background: $yellow;
+                            color: #fff;
+                            transition: 1s;
+                                @media only screen and (max-width: $breakpoint_xxll) {
+
+                                }
+                                @media only screen and (max-width: $breakpoint_xxl) {
+                                    right: 2%;
+                                    top: -5px;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                                @media only screen and (max-width: $breakpoint_xl) {
+                                    right: 2%;
+                                    top: -5px;
+                                }
+                                @media only screen and (max-width: $breakpoint_sm) {
+
+                                }
+                                @media only screen and (max-width: $breakpoint_md) {
+
+                                }
+                        }
+                }
+        }
+}

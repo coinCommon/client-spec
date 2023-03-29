@@ -1,0 +1,634 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+.line_height {
+    line-height: 1.5em;
+    @media only screen and (max-width: $breakpoint_xxll) {
+
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+        line-height: 1.4em;
+    }
+    @media only screen and (max-width: $breakpoint_xl) {
+        line-height: 1.3em;
+    }
+    @media only screen and (max-width: $breakpoint_md) {
+        line-height: 1.3em;
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+
+    }
+}
+
+
+
+.slider_style {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    max-height: 350px;
+    margin: 50px auto;
+    @media only screen and (max-width: $breakpoint_xxll) {
+        max-height: 280px;
+    }
+    @media only screen and (max-width: $breakpoint_xxll) {
+        max-width: 1199px;
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+        max-width: 924px;
+    }
+    @media only screen and (max-width: $breakpoint_xl) {
+        max-width: 100%;
+        justify-content: center;
+    }
+    @media only screen and (max-width: $breakpoint_md) {
+        margin: 0 0 20px 0;
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+
+    }
+
+    .slider_style_slide {
+        width: 100%;
+        max-width: 1100px;
+        box-shadow: 5px 3px 3px 0 #b3b3b7;
+        @media only screen and (max-width: $breakpoint_xxll) {
+            max-width: 900px;
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+            max-width: 924px;
+        }
+        @media only screen and (max-width: $breakpoint_xl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            box-shadow: none;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+
+        }
+        .carosel_content {
+            position: relative;
+            width: auto;
+            height: 100%;
+            img {
+                object-fit: cover;
+                height: 350px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                white-space: nowrap;
+                @media only screen and (max-width: $breakpoint_xxll) {
+                    width: 900px;
+                    height: 280px;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    width: 740px;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                    width: 420px;
+                    height: 150px;
+
+                }
+            }
+            div {
+                position: absolute;
+                bottom: 50px;
+                left: 7%;
+                color: #444;
+                max-width: 50%;
+                line-height: 1.7em;
+                @media only screen and (max-width: $breakpoint_md) {
+                    line-height: 1.6em;
+                }
+                label {
+                    font-size: 14px;
+                    padding: 3px;
+                    background: rgba(0, 0, 0, 0.5);
+                    color: #fff;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        font-size: 12px;
+                    }
+                }
+                button {
+                    margin-top: 15px;
+                    font-family: $font;
+                    width: 200px;
+                    height: 40px;
+                    border: solid 2px $yellow;
+                    color: $yellow;
+                    border-radius: 5px;
+                    display: block;
+                    background: #444;
+                    transition: $transition;
+                    cursor: pointer;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        width: 150px;
+                        height: 30px;
+                    }
+                    &:hover {
+                        //transform: scale(1.1);
+                        background: #333;
+
+                    }
+                }
+            }
+
+        }
+
+        //img {
+        //    object-fit: cover;
+        //    height: 350px;
+        //    background-position: center center;
+        //    background-repeat: no-repeat;
+        //    overflow: hidden;
+        //    @media only screen and (max-width: $breakpoint_xxll) {
+        //
+        //    }
+        //    @media only screen and (max-width: $breakpoint_xxl) {
+        //
+        //    }
+        //    @media only screen and (max-width: $breakpoint_xl) {
+        //
+        //    }
+        //    //@media only screen and (max-width: $breakpoint_md) {
+        //    //    height: 210px;
+        //    //}
+        //    //@media only screen and (max-width: $breakpoint_sm) {
+        //    //
+        //    //}
+        //}
+    }
+
+    .slide_div_right {
+        display: block;
+        width: 280px;
+        height: 350px;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        @media only screen and (max-width: $breakpoint_xxll) {
+            width: 280px;
+            max-height: 280px;
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+            display: none;
+        }
+
+        .slide_right {
+            width: 280px;
+            height: 350px;
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 3px;
+            object-fit: cover;
+            @media only screen and (max-width: $breakpoint_xxll) {
+                max-height: 280px;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.popular_cat_title {
+    h1 {
+        font-family: $font;
+        font-size: 28px;
+        font-weight: bold;
+        color: $black;
+        @media only screen and (max-width: $breakpoint_md) {
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+.popular_cat_grid {
+    margin: 40px 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(130px, auto);
+    grid-gap: 10px;
+    @media only screen and (max-width: $breakpoint_xxll) {
+
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media only screen and (max-width: $breakpoint_xl) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(140px, auto);
+    }
+    @media only screen and (max-width: $breakpoint_md) {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 0;
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+        //grid-template-columns: repeat(1, 1fr);
+        //grid-auto-rows: minmax(180px, auto);
+    }
+    a {
+        text-decoration: none;
+        font-family: $fontComfort;
+        font-weight: bold;
+        font-size: 14px;
+        transition: $transition;
+        @media only screen and (max-width: $breakpoint_sm) {
+            font-size: 12px;
+        }
+    }
+    img {
+        width: 60px;
+        margin: 0 auto;
+        @media only screen and (max-width: $breakpoint_sm) {
+            width: 50px;
+        }
+    }
+
+    .popular_cat_flex {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 5px 5px 5px 5px $shadow;
+        cursor: pointer;
+        transition: .1s;
+        border-radius: 2px;
+        &:hover a {
+            color: $yellow;
+        }
+        .popular_content {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            grid-gap: 15px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+.news_grid, .services_grid {
+    margin: 40px 0;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+
+    @media only screen and (max-width: $breakpoint_xxll) {
+
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media only screen and (max-width: $breakpoint_xl) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $breakpoint_md) {
+
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(80px, auto);
+    }
+
+    .news_flex, .services_flex {
+        cursor: pointer;
+        transition: .3s;
+        border-radius: 2px;
+        padding: 25px 0 0 0;
+        overflow: hidden;
+        @media only screen and (max-width: $breakpoint_xxll) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_xl) {
+
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+            padding: 0;
+        }
+        div {
+            display: flex;
+            justify-content: start;
+            padding: 5px 0 0 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: $black;
+            @media only screen and (max-width: $breakpoint_sm) {
+                padding: 0;
+            }
+            a{
+                color: $yellow;
+                font-size: 16px;
+                text-decoration: none;
+                margin-top: 10px;
+                transition: .1s;
+                font-weight: 500;
+                &:hover {
+                    color: $yellow;
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+    .news_flex_content, .services_flex_content {
+        cursor: pointer;
+        transition: .1s;
+        border-radius: 2px;
+        padding: 20px 15px;
+        color: $blackLight;
+        //overflow: hidden;
+        //height: 200px;
+        &:hover a {
+            color: $yellow;
+        }
+        &:hover {
+            box-shadow: 5px 5px 20px 10px $shadow;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            padding: 10px 10px;
+        }
+        div {
+            display: flex;
+            justify-content: start;;
+        }
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            margin: 10px 0;
+            font-family: $font;
+            transition: .1s;
+        }
+        p {
+            color: $gray;
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-family: $font;
+        }
+        div {
+            max-height: 170px;
+            overflow: hidden;
+            span {
+                font-size: 16px;
+                font-family: $font;
+                color: $gray;
+                padding-bottom: 10px;
+                //white-space: break-spaces;
+
+                @extend .line_height;
+
+                @media only screen and (max-width: $breakpoint_xxll) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.recommended_slider_title {
+    font-size: 28px;
+    font-weight: bold;
+    color: $black;
+}
+.recommended_slider_style {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    max-height: 500px;
+    margin: 50px auto;
+    @media only screen and (max-width: $breakpoint_md) {
+        max-height: 700px;
+        margin: 10px 0 50px 0;
+    }
+    .recommended_slider {
+        padding: 20px;
+        cursor: pointer;
+        transition: .3s;
+        @media only screen and (max-width: $breakpoint_md) {
+            padding: 40px 20px;
+        }
+        &:hover .recommended_slider_detailed {
+            color: $yellow;
+        }
+        .recommended_slider_flex {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            margin: 2px;
+            transition: $transition;
+            text-align: center;
+            max-height: 200px;
+            overflow: hidden;
+            @media only screen and (max-width: $breakpoint_md) {
+                max-height: 400px;;
+            }
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                border-radius: 5px;
+                @media only screen and (max-width: $breakpoint_md) {
+                    height: 400px;;
+                }
+            }
+        }
+
+        .recommended_slider_name {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            word-wrap: normal;
+            text-overflow: ellipsis;
+            transition: $transition;
+        }
+        .recommended_slider_price {
+            font-size: 14px;
+            font-weight: 500;
+            color: $blue;
+            margin-bottom: 20px;
+        }
+        div {
+            .recommended_slider_detailed {
+                font-size: 12px;
+                font-weight: 300;
+                color: $gray;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+.privacy_policy {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    h2 {
+        padding: 20px 0;
+        font-size: 26px;
+        font-weight: normal;
+        color: #000;
+    }
+    .privacy_policy_chapter_gl {
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $font;
+        padding: 15px 0;
+        text-transform: uppercase;
+        line-height: 1.6em;
+    }
+    .privacy_policy_chapter {
+        font-size: 16px;
+        font-family: $font;
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 1.6em;
+        color: #444;
+    }
+}
+
+.user_agreement {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    h2 {
+        padding: 20px 0;
+        font-size: 26px;
+        font-weight: normal;
+        color: #000;
+    }
+    .user_agreement_chapter {
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $font;
+        padding: 15px 0;
+        text-transform: uppercase;
+        line-height: 1.6em;
+    }
+    .user_agreement_title {
+        font-size: 16px;
+        font-family: $font;
+        padding-left: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 1.6em;
+        color: #444;
+    }
+}
+
+
+

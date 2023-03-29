@@ -1,0 +1,512 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+.line_height {
+    line-height: 1.3em;
+    @media only screen and (max-width: $breakpoint_md) {
+        line-height: 1.2em;
+    }}
+
+
+.device {
+    margin: 30px 0;
+
+    @media only screen and (max-width: $breakpoint_xl) {
+        margin: 20px 0;
+    }
+    .device_title_type {
+        padding-bottom: 60px;
+        @media only screen and (max-width: $breakpoint_md) {
+            padding-bottom: 50px;
+            padding-top: 10px;
+        }
+        .device_title_type_back {
+            //display: flex;
+            //align-items: center;
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                .type {
+                    margin-bottom: 10px;
+                    font-family: $fontComfort;
+                    font-size: 18px;
+                    font-weight: 900;
+                    color: #444;
+                    text-transform: uppercase;
+                    //-webkit-text-stroke: .0001em #333;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .brand_div_i {
+                transition: $transition;
+                &:hover {
+                    color: orange;
+                }
+                .brand {
+                    font-family: $fontComfort;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: #444;
+                    cursor: pointer;
+                    transition: $transition;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        color: orange;
+                    }
+
+                }
+            }
+
+            //div {
+            //    display: flex;
+            //    align-items: center;
+            //    .brand {
+            //        font-family: $fontComfort;
+            //        padding-left: 10px;
+            //        margin: 0;
+            //        font-size: 16px;
+            //        text-transform: uppercase;
+            //        font-weight: 500;
+            //        line-height: 1;
+            //        color: #444;
+            //        cursor: pointer;
+            //        transition: $transition;
+            //        &:hover {
+            //            color: orange;
+            //        }
+            //    }
+            //}
+        }
+    }
+
+
+    .device_flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: start;
+        grid-gap: 50px 0;
+        width: 100%;
+        @media only screen and (max-width: $breakpoint_xxll) {
+        }
+        @media only screen and (max-width: $breakpoint_xxl) {
+            grid-gap: 50px 30px;
+        }
+        @media only screen and (max-width: $breakpoint_xl) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+        }
+
+        .device_carosel {
+            margin: 0;
+            @media only screen and (max-width: $breakpoint_xl) {
+                text-align: center;
+                margin: 0 auto;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                margin: 0;
+            }
+            .device_carosel_padding {
+                padding: 0;
+                //.device_carosel_Carosel {
+                //    text-align: center;
+                //    width: 600px;
+                //    max-height: 600px;
+                //    margin: 0 auto;
+                //    padding: 0;
+                //}
+            }
+        }
+
+        .device_flex_title {
+            @media only screen and (max-width: $breakpoint_xl) {
+                margin-top: 10px;
+            }
+            h2 {
+                font-size: 24px;
+                color: $black;
+                @media only screen and (max-width: $breakpoint_md) {
+                    line-height: 1.4em;
+                }
+            }
+            .device_title_rating {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 15px 0;
+                @media only screen and (max-width: $breakpoint_xl) {
+                    justify-content: space-between;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    padding: 20px 0;
+                }
+                img {
+                    width: 20px;
+                }
+                p {
+                    position: relative;
+                    margin-left: 5px;
+                    font-size: 16px;
+                    color: #444444;
+                }
+                .device_title_star {
+                    @extend .flex_center;
+                    img {
+                        padding: 0 1px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                .device_title_cod {
+                    margin-left: 170px;
+                    font-size: 12px;
+                    @media only screen and (max-width: $breakpoint_xxll) {
+                        margin-left: 150px;
+                    }
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                        margin-left: 90px;
+                    }
+                    @media only screen and (max-width: $breakpoint_xl) {
+                        margin: 0;
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+                    }
+                }}
+
+            .device_block_title {
+                margin: 30px 0;
+                @media only screen and (max-width: $breakpoint_md) {
+                    margin: 10px 0;
+                }
+                a {
+                    font-size: 40px;
+                    color: #333;
+                }
+                button {
+                    @extend .flex_center;
+                    margin: 20px 0;
+                    width: 200px;
+                    height: 50px;
+                    border: none;
+                    color: $black;
+                    background: $yellow;
+                    font-family: $fontComfort;
+                    font-weight: 700;
+                    border-radius: 3px;
+                    transition: $transition;
+                    cursor: pointer;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        width: 100%;
+                    }
+                    &:hover {
+                        color: $yellow;
+                        background: $black;
+                    }
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+                .show_and_hide_size {
+                    margin-top: 20px;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+
+                    .device_size_remainder {
+                        border: solid 2px #eee;
+                        padding: 10px;
+                        border-radius: 5px;
+                        .device_size_remainder_flex {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding: 5px 0;
+                            @media only screen and (max-width: $breakpoint_md) {
+                                width: 100%;
+                            }
+                            .device_size {
+                                @media only screen and (max-width: $breakpoint_md) {
+                                    font-size: 16px;
+                                }
+                            }
+                            .device_remainder {
+                                @media only screen and (max-width: $breakpoint_md) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .show_and_hide_size_padding {
+                        padding: 10px 0;
+                        cursor: pointer;
+                        @media only screen and (max-width: $breakpoint_md) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .device_specifications {
+        .device_specifications_flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 100px;
+            @media only screen and (max-width: $breakpoint_xxll) {
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-top: 80px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                margin-top: 30px;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                margin-top: 50px;
+                justify-content: space-between;
+            }
+            a {
+                display: block;
+                margin-right: 50px;
+                color: $black;
+                text-decoration: none;
+                position: relative;
+                font-size: 16px;
+                cursor: pointer;
+                @media only screen and (max-width: $breakpoint_md) {
+                    margin: 0;
+                }
+            }
+        }
+
+        .device_specifications_content {
+            .device_specifications_content_flex {
+                @extend .flex_start;
+                @extend .line_height;
+                position: relative;
+                padding: 50px 0;
+                white-space: break-spaces;
+                transition: $transition;
+                h2{
+                    font-size: 32px;
+                    color: $black;
+                    width: 25%;
+                    @media only screen and (max-width: $breakpoint_xxll) {
+                        width: 30%;
+                        font-size: 28px;
+                    }
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                        width: 0;
+                        display: none;
+                    }
+                    @media only screen and (max-width: $breakpoint_xl) {
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+                    }
+                }
+
+                .device_specifications_content_flex_div {
+                    width: 75%;
+                    font-size: 16px;
+                    line-height: 1.4em;
+                    word-wrap: break-word;
+                    hyphens: auto;
+                    @media only screen and (max-width: $breakpoint_xxll) {
+                        width: 70%;
+                    }
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                        width: 100%;
+                        line-height: 1.5em;
+                    }
+                    @media only screen and (max-width: $breakpoint_xl) {
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+                        line-height: 1.6em;
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+                    }
+
+                    .button_otz {
+                        @extend .flex_center;
+                        margin: 0 0 40px 0;
+                        width: 200px;
+                        height: 50px;
+                        border: solid 2px #767676;
+                        color: #444;
+                        background: none;
+                        font-family: $font;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-radius: 3px;
+                        transition: $transition;
+                        cursor: pointer;
+                        &:hover {
+                            border-color: #333;
+                            color: #333;
+                        }
+                        @media only screen and (max-width: $breakpoint_md) {
+                            width: 100%;
+                        }
+                    }
+                    .device_specifications_content_flex_div_otz {
+                        border: solid 2px orange;
+                        border-radius: 5px;
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        .description {
+                            font-size: 12px;
+                            margin-top: 10px;
+                            @media only screen and (max-width: $breakpoint_md) {
+                                line-height: 1.7em;
+                            }
+                        }
+                        .flex_space {
+                            .device_title_star {
+                                @extend .flex_center;
+                                p {
+                                    margin-left: 5px;
+                                    font-size: 12px;
+                                }
+                            }
+                            h4 {
+                                font-size: 12px;
+                                color: #767676;
+                            }
+                            p {
+                                font-size: 10px;
+                                color: #767676;
+                            }
+                        }
+                    }
+                }
+
+                .device_specifications_content_flex_specifications {
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 60%;
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                        width: 100%;
+                    }
+                    .device_specifications_content_flex_specifications_flex {
+                        width: 100%;
+                        p {
+                            color: #333;
+                            font-size: 16px;
+                            margin-top: 10px;
+                        }
+                        .info_flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: #92927C;
+                            font-size: 16px;
+                            line-height: 2;
+                            span {
+                                display: flex;
+                                justify-content: flex-end;
+                                color: #444444;
+                                font-weight: 600;
+                                font-size: 16px;
+                                @media only screen and (max-width: $breakpoint_md) {
+                                    font-size: 12px;
+                                }
+                            }
+                            .info_flex_title {
+                                display: flex;
+                                justify-content: flex-start;
+                                @media only screen and (max-width: $breakpoint_md) {
+                                    font-size: 12px;
+                                }
+                            }
+                            .device_specifications_content_dots {
+                                flex: 1 0;
+                                border-bottom: 2px dotted #999999;
+                                height: 1em;
+                                margin: 0 .5em;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+//.device_flex_img {
+//    display: flex;
+//    justify-content: center;
+//    width: 45%;
+//    height: auto;
+//}
+//.device_flex_img img {
+//    max-width: 600px;
+//    max-height: 500px;
+//}
+
+
+
+

@@ -1,0 +1,616 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+
+
+.footer_section {
+    //background: #fcfcfc;
+    background: #fcfcfc;
+    z-index: 999;
+    @media only screen and (max-width: $breakpoint_xxll) {
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+    }
+    @media only screen and (max-width: $breakpoint_xxl) {
+    }
+    @media only screen and (max-width: $breakpoint_md) {
+        padding-bottom: 65px;
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+    }
+
+    .footer_form {
+        display: block;
+        position: relative;
+        padding: 20px 0;
+        border-bottom: solid 1px #cccccc;
+
+        form{
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            @media only screen and (max-width: $breakpoint_xxl) {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                width: 100%;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                margin: 10px 0;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+            }
+            label {
+                font-size: 20px;
+                margin-right: 50px;
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                }
+            }
+            input {
+                box-sizing: border-box;
+                width: 40%;
+                height: 40px;
+                border: solid 1px #444;
+                font-family: $fontComfort;
+                background: #fcfcfc;
+                outline: none;
+                margin-right: 30px;
+                padding: 0 10px;
+                border-radius: 3px;
+                &:focus {
+                    border: solid 1px orange;
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    display: block;
+                    margin: 25px auto;
+                    width: 100%;
+                    height: 50px;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                }
+            }
+            button {
+                font-family: $font;
+                width: 180px;
+                height: 42px;
+                cursor: pointer;
+                background: none;
+                color: #444;
+                font-size: 14px;
+                border: solid 1px #444;
+                border-radius: 4px;
+                transition: $transition;
+                &:hover {
+                    border-color: orange;
+                    color: orange;
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 50px;
+                    font-size: 16px;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                }
+            }
+        }
+        .user_agreement {
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: .5s;
+            transform: translateY(-20px);
+            font-size: 10px;
+            line-height: 1.5em;
+            padding: 0;
+            @media only screen and (max-width: $breakpoint_xxl) {
+                margin-bottom: 5px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                line-height: 1.6em;
+                margin-bottom: 5px;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                line-height: 1.8em;
+                margin-bottom: 25px;
+            }
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                color: #76a6fc;
+                font-size: 10px;
+                &:hover {
+                    color: #ffee00;
+                }
+            }
+        }
+    }
+
+    .footer_blocks {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+        @media only screen and (max-width: $breakpoint_xxl) {
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            grid-gap: 30px 0;
+        }
+        span {
+            a {
+                font-weight: bold;
+            }
+        }
+        i {
+            color: #ffee00;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: #444;
+            margin-top: 20px;
+            transition: $transition;
+        }
+        button {
+            @extend .flex_center;
+            width: 180px;
+            height: 42px;
+            cursor: pointer;
+            background: none;
+            color: #444;
+            font-size: 14px;
+            border: solid 1px #444;
+            border-radius: 4px;
+            transition: $transition;
+            margin-top: 20px;
+            font-family: $font;
+            &:hover {
+                border-color: orange;
+                color: orange;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                width: 100%;
+                height: 50px;
+                font-size: 16px;
+            }
+            i {
+                color: #444;
+                margin-left: 10px;
+            }
+            &:hover i {
+                color: orange;
+                transition: $transition;
+            }
+        }
+        .footer_contact {
+            @media only screen and (max-width: $breakpoint_sm) {
+                display: block;
+                text-align: center;
+            }
+            .button_map {
+                height: 42px;
+                font-size: 14px;
+                transition: $transition;
+                margin-top: 20px;
+                font-family: $font;
+                @media only screen and (max-width: $breakpoint_sm) {
+                    width: 100%;
+                    height: 50px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .footer_blocks_a {
+            @media only screen and (max-width: $breakpoint_xxl) {
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                text-align: right;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                text-align: center;
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                color: #444;
+                margin-top: 10px;
+                line-height: 1.5em;
+                transition: $transition;
+                cursor: pointer;
+                @media only screen and (max-width: $breakpoint_sm) {
+                    font-size: 16px;
+                }
+                &:hover {
+                    color: #ffee00;
+                }
+            }
+            h3 {
+                @media only screen and (max-width: $breakpoint_sm) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .footer_blocks_messenger {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            grid-gap: 5px 10px;
+            position: relative;
+            @media only screen and (max-width: $breakpoint_xxl) {
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                display: flex;
+                margin-top: 40px;
+                justify-content: center;
+                grid-gap: 5px 0;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                margin: 0;
+            }
+            i {
+                position: relative;
+                color: #444444;
+                transition: $transition;
+                cursor: pointer;
+                font-size: 24px;
+                text-align: center;
+                @media only screen and (max-width: $breakpoint_xl) {
+                    padding: 0 5px;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                    font-size: 28px;
+                    padding: 0 20px;
+                }
+                &:hover {
+                    color: $yellow;
+                }
+                &:hover:after {
+                    content: attr(data-name);
+                    position: absolute;
+                    width: 160px;
+                    right: 1px;
+                    top: 0;
+                    color: #444;
+                    text-align: center;
+                    font-family: $fontComfort;
+                    font-size: 12px;
+                    padding: 5px 5px;
+                    @media only screen and (max-width: $breakpoint_xxl) {
+                    }
+                    @media only screen and (max-width: $breakpoint_md) {
+                        width: auto;
+                        left: 0;
+                        top: 40px;
+                    }
+                    @media only screen and (max-width: $breakpoint_sm) {
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer_line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: solid 1px #cccccc;
+        padding: 15px 0;
+        @media only screen and (max-width: $breakpoint_sm) {
+            display: none;
+        }
+        a {
+            cursor: pointer;
+            color: #444;
+            text-decoration: none;
+            font-size: 10px;
+            transition: $transition;
+            &:hover {
+                color: #ffee00;
+            }
+        }
+        img {
+            width: 150px;
+        }
+    }
+
+    .open_message_fixed {
+        box-sizing: border-box;
+        display: block;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        width: 300px;
+        height: auto;
+        border-radius: 2px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(150px);
+        transition: .5s;
+        cursor: pointer;
+        z-index: 9999;
+        @media only screen and (max-width: $breakpoint_md) {
+            width: 100%;
+            right: 0;
+            bottom: 10px;
+        }
+        .open_message {
+            position: relative;
+            text-align: center;
+            .open_message_text {
+                padding: 20px 15px;
+                font-size: 16px;
+                color: #fff;
+                text-shadow: #444 2px 2px 4px;
+                transition: $transition;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+
+.feed_back {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999999;
+    .position_absolute {
+        transition: $transition;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .7);
+        z-index: 999;
+        .position_relative {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .feed_back_close {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .feed_back_content {
+                transition: .5s;
+                background: #fff;
+                padding: 20px;
+                border-radius: 2px;
+                box-sizing: border-box;
+                height: 90%;
+                width: 35%;
+                transform: translateY(999px);
+                .feed_back_close_x {
+                    position: absolute;
+                    top: 40px;
+                    right: 40px;
+                    cursor: pointer;
+                    transition: $transition;
+                    color: #767676;
+                    &:hover {
+                        color: orange;
+                    }
+                }
+                @media only screen and (max-width: $breakpoint_xxll) {
+                    width: 40%;
+                }
+                @media only screen and (max-width: $breakpoint_xxl) {
+                    width: 50%;
+                }
+                @media only screen and (max-width: $breakpoint_xl) {
+                    width: 70%;
+                }
+                @media only screen and (max-width: $breakpoint_md) {
+                    width: 90%;
+                    height: 100%;
+                }
+                @media only screen and (max-width: $breakpoint_sm) {
+                    width: 100%;
+                }
+
+                .feed_back_padding {
+                    padding: 40px;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        padding: 60px 20px;
+                    }
+                    .flex_space {
+                        .feed_back_title {
+                            font-size: 24px;
+                            color: #333;
+                            font-weight: bold;
+                        }
+                    }
+                    .feed_back_grid {
+                        margin-top: 50px;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-gap: 20px;
+                        width: 100%;
+                        .feed_back_input {
+                            position: relative;
+                            padding-bottom: 20px;
+                            .input_clear {
+                                position: absolute;
+                                top: 5px;
+                                right: 0;
+                                color: orange;
+                                cursor: pointer;
+                                display: none;
+                            }
+                            .change_input_topic {
+                                width: 100%;
+                                height: auto;
+                                background: #fff;
+                                position: absolute;
+                                top: 29px;
+                                left: 0;
+                                border: solid 1px rgb(216, 216, 216);
+                                transition: $transition;
+                                display: none;
+                                z-index: 100;
+
+                                .background {
+                                    cursor: pointer;
+                                    padding: 10px 10px;
+                                    color: #767676;
+                                    transition: $transition;
+                                    &:hover {
+                                        background: cornsilk;
+                                    }
+                                }
+                            }
+                            label {
+                                font-family: $font;
+                                position: absolute;
+                                top: 3px;
+                                left: 0;
+                                pointer-events: none;
+                                font-size: 14px;
+                                font-weight: 100;
+                                color: rgb(216, 216, 216);
+                                transition: $transition;
+                            }
+                            input {
+                                color: #767676;
+                                border: none;
+                                outline: none;
+                                border-bottom: solid 2px rgb(223, 223, 225);
+                                width: 100%;
+                                padding: 5px 0;
+                                transition: $transition;
+                                font-size: 14px;
+                                font-family: $font;
+                                &:focus {
+                                    border-color: orange;
+                                }
+                            }
+                            .textarea_message {
+                                color: #444;
+                                font-size: 12px;
+                                padding-bottom: 10px;
+                                font-weight: lighter;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                .textarea_message_length {
+                                    font-size: 10px;
+                                }
+                            }
+                            textarea {
+                                color: #767676;
+                                resize: none;
+                                font-size: 14px;
+                                box-sizing: border-box;
+                                padding: 10px;
+                                width: 100%;
+                                height: 150px;
+                                outline: none;
+                                border-radius: 5px;
+                                border: solid 2px rgb(223, 223, 225);
+                                &:hover {
+                                    border-color: orange;
+                                }
+                            }
+                            button {
+                                outline: none;
+                                border: none;
+                                background: orange;
+                                color: whitesmoke;
+                                font-family: $font;
+                                padding: 10px 30px;
+                                border-radius: 3px;
+                                cursor: pointer;
+                                @media only screen and (max-width: $breakpoint_md) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*.open_message_absolute {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
+
+/*.open_message_width {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: relative;*/
+/*}*/

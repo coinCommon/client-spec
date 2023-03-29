@@ -1,0 +1,683 @@
+$font: JetBrains Mono, sans-serif;
+$fontComfort: Comfortaa, sans-serif;
+$fontArsenal: Arsenal, sans-serif;
+$font-size: 14px;
+$font-weight: 500;
+$transition: .3s;
+
+$yellow: #ffee00;
+$darkcyan: darkcyan;
+$lightgreen: lightgreen;
+$shadow: #eee;
+$blue: #76a6fc;
+$gray: #999;
+$coral: coral;
+$crimson: crimson;
+$black: #000;
+$blackLight: #444;
+
+$breakpoint_xxll: 1400px;
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
+
+
+//@extend %class_name; Импорт стилей из класса
+.flex_center {display: flex;justify-content: center;align-items: center;}
+.flex_space {display: flex;justify-content: space-between;align-items: center;}
+.flex_start {display: flex;justify-content: start;align-items: center;}
+.flex_end {display: flex;justify-content: flex-end;align-items: center;}
+
+
+
+
+
+.button_basket_card {
+    width: 100%;
+    height: 30px;
+    background: none;
+    font-family: $font;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 5px 0;
+}
+.line_height {
+    line-height: 1.3em;
+    @media only screen and (max-width: $breakpoint_md) {
+        line-height: 1.2em;
+    }}
+
+
+
+
+
+
+.basket {
+    //padding: 50px 0 0 0;
+    margin: 20px 0 0 0;
+
+    .basket_back {
+        padding: 10px 0;
+        min-height: 80px;
+        @media only screen and (max-width: $breakpoint_sm) {
+            padding: 0 0 20px 0;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            padding-bottom: 30px;
+            color: $black;
+            @media only screen and (max-width: $breakpoint_md) {
+                font-size: 20px;
+            }
+        }
+
+        .button_processing {
+            font-family: $font;
+            width: 300px;
+            height: 50px;
+            font-size: 16px;
+            background: none;
+            cursor: pointer;
+            margin: 40px 0 0 0;
+            color: #444;
+            border: solid 1px #444;
+            border-radius: 4px;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: $breakpoint_md) {
+                width: 100%;
+            }
+        }
+        .button_processing:hover {
+            border-color: orange;
+            color: orange;
+        }
+    }
+        .basket_grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 20px;
+            @media only screen and (max-width: $breakpoint_xxll) {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            @media only screen and (max-width: $breakpoint_xxl) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    .basket_there_are_no_products {
+        border: solid 1px orange;
+        border-radius: 5px;
+        padding: 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(20px, auto);
+        grid-gap: 20px 0;
+        @media only screen and (max-width: $breakpoint_xl) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            grid-template-columns: 1fr;
+        }
+        .basket_none {
+            font-family: $font;
+            font-weight: lighter;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 1.8;
+            color: #444;
+            p {
+                text-align: center;
+                color: orange;
+                font-weight: bold;
+                padding-bottom: 5px;
+            }
+            span {
+                text-align: center;
+                color: #76a6fc;
+            }
+            button {
+                margin-left: 5px;
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: none;
+                background: #444;
+
+                i {
+                    font-size: 8px;
+                    color: $yellow;
+
+                }
+            }
+        }
+        .basket_there_are_no_products_img {
+            margin-left: 20px;
+            img {
+                width: 50px;
+                transition: $transition;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.basket_array {
+    padding: 20px;
+    transition: .3s;
+    height: auto;
+    @media only screen and (max-width: $breakpoint_md) {
+        box-shadow: 5px 5px 20px 10px $shadow;
+    }
+    @media only screen and (max-width: $breakpoint_sm) {
+        padding: 15px;
+    }
+    &:hover {
+        box-shadow: 5px 5px 20px 10px $shadow;
+    }
+    a {
+        cursor: pointer;
+    }
+    .basket_img {
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: 200px;
+            justify-content: center;
+            white-space: nowrap;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 5px;
+            @media only screen and (max-width: $breakpoint_xxl) {
+                height: 200px;
+            }
+            @media only screen and (max-width: $breakpoint_xl) {
+                height: 200px;
+            }
+            @media only screen and (max-width: $breakpoint_md) {
+                height: 280px;
+            }
+            @media only screen and (max-width: $breakpoint_sm) {
+                height: 220px;
+            }
+        }
+    }
+    .basket_name {
+        @extend .line_height;
+        cursor: pointer;
+        transition: .2s;
+        font-weight: 100;
+        font-size: 14px;
+        //line-height: 1.3;
+        color: $black;
+        padding: 20px 0 10px 0;
+        overflow: hidden;
+        display: block;
+        max-width: 100%;
+        height: 45px;
+        @media only screen and (max-width: $breakpoint_xl) {
+            font-size: 16px;
+            height: 55px;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            font-size: 18px;
+            height: 58px;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+            font-size: 14px;
+            height: 58px;
+            padding: 10px 0 0 0;
+        }
+        &:hover {
+            color: $yellow;
+        }
+    }
+    .basket_status{
+        @extend .flex_center;
+        color: $lightgreen;
+        cursor: pointer;
+        font-size: 18px;
+        position: relative;
+        transition: $transition;
+        padding: 5px 0;
+        &:hover:after {
+            content: attr(data-name);
+            position: absolute;
+            width: 160px;
+            left: 0;
+            bottom: 30px;
+            background: $lightgreen;
+            color: #fff;
+            text-align: center;
+            font-family: $font;
+            font-size: 14px;
+            padding: 5px 5px;
+            box-shadow: 5px 5px 20px 10px $shadow;
+        }
+    }
+    .basket_flex {
+        @extend .flex_space;
+        padding: 5px 0;
+        @media only screen and (max-width: $breakpoint_sm) {
+            padding: 5px 0;
+        }
+        .basket_price {
+            font-size: 16px;
+            font-weight: bold;
+            @media only screen and (max-width: $breakpoint_sm) {
+                font-size: 18px;
+            }
+        }
+    }
+    .basket_size_i {
+        @extend .button_basket_card;
+        border: none;
+        color: $blue;
+        margin-top: 10px;
+        &:hover {
+            border: solid 1px $blue;
+        }
+        @media only screen and (max-width: $breakpoint_md) {
+            font-size: 14px;
+            height: 45px;
+        }
+        //@media only screen and (max-width: $breakpoint_sm) {
+        //    font-size: 14px;
+        //    height: 55px;
+        //    //margin: 25px 0;
+        //}
+        i {
+            margin-left: 5px;
+        }
+    }
+    .basket_size_size_quan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        background: #fff;
+        box-shadow: $shadow 0 0 3px 3px;
+        border: solid 2px $gray;
+        border-radius: 3px;
+        transition: $transition;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        z-index: 100;
+        .basket_size_size_quan_button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-bottom: 5px;
+            button {
+                border: none;
+                background: none;
+                cursor: pointer;
+                color: $lightgreen;
+            }
+        }
+    }
+    .basket_size_price {
+        font-weight: 500;
+        font-size: 12px;
+        @extend .flex_center;
+        color: $gray;
+        @media only screen and (max-width: $breakpoint_md) {
+            font-size: 16px;
+        }
+        @media only screen and (max-width: $breakpoint_sm) {
+            font-size: 14px;
+        }
+        span {
+            font-weight: 500;
+        }
+    }
+    .basket_button_clear {
+        @extend .flex_center;
+        button {
+            @extend .button_basket_card;
+            border: none;
+            color: $coral;
+            margin-bottom: 10px;
+            @media only screen and (max-width: $breakpoint_md) {
+                font-size: 14px;
+                height: 45px;
+            }
+            //@media only screen and (max-width: $breakpoint_sm) {
+            //    font-size: 14px;
+            //    height: 45px;
+            //}
+            &:hover {
+                border: solid 1px $coral;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.modals_basket_absolute {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(54, 54, 54, 0.5);
+    z-index: 999;
+    .modals_basket_relative {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0 auto;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {cursor: pointer;}
+        .modal_show {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            cursor: pointer;
+            //@media only screen and (max-width: $breakpoint_md) {
+            //    background: #fff;
+            //}
+        }
+        .modal_size {
+            padding: 20px 15px;
+            background: #fff;
+            width: auto;
+            max-width: 700px;
+            height: auto;
+            max-height: 500px;
+            border-radius: 15px;
+            transform: translateY(-250px);
+            transition: .3s;
+            @media only screen and (max-width: $breakpoint_md) {
+                max-height: 900px;
+                padding: 50px 15px;
+                width: 90%;
+            }
+        }
+        .modal_arrow_show {
+            display: none;
+            position: relative;
+            margin-top: -25px;
+            @media only screen and (max-width: $breakpoint_md) {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        .basketArray_modals {
+            width: 100%;
+            padding: 20px 0;
+            box-shadow: 0 1px 0 0 $shadow;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-auto-rows: minmax(10px, auto);
+            align-items: center;
+            justify-content: center;
+            transition: .2s;
+            @media only screen and (max-width: $breakpoint_md) {
+                grid-template-columns: 1fr;
+                grid-gap: 10px 0;
+            }
+            h3 {
+                padding: 0 0 0 20px;
+                font-family: $font;
+                @media only screen and (max-width: $breakpoint_md) {
+                    line-height: 1.6em;
+                }
+            }
+            a {
+                @media only screen and (max-width: $breakpoint_md) {
+                    line-height: 1.6em;
+                    padding: 0 0 0 20px;
+                }
+            }
+        }
+        .modals_overflowY {
+            max-height: 200px;
+            overflow-y: scroll;
+            padding: 10px 0;
+            &::-webkit-scrollbar-track {
+                background-color: #fff;
+            }
+            &::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 1) !important;
+                background-color: #fff;
+            }
+            .size_flex {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 15px 0;
+                transition: .5s;
+                input {
+                    width: 10%;
+                    padding: 10px;
+                    color: #fff;
+                    font-weight: bold;
+                    outline: none;
+                    border: none;
+                    margin-left: 5px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    background: $blue;
+                }
+                select {
+                    width: auto;
+                    padding: 6px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    outline: none;
+                    border: none;
+                    box-shadow: $shadow 0 0 0 1px;
+                    border-radius: 5px;
+                }
+                option {
+                    font-size: 18px;
+                }
+                .size_flex_button_remove {
+                    width: 15%;
+                    height: 30px;
+                    font-size: 12px;;
+                    border: none;
+                    color: $coral;
+                    background: none;
+                    font-family: $font;
+                    cursor: pointer;
+                    transition: .3s;
+                    border-radius: 2px;
+                    &:hover {
+                        color: $crimson;
+                    }
+                }
+                .button_next_prev {
+                    box-sizing: border-box;
+                    background: none;
+                    font-size: 18px;
+                    font-weight: bold;
+                    width: 15%;
+                    height: 30px;
+                    margin-left: 5px;
+                    box-shadow: $shadow 0 0 0 1px;
+                    border: none;
+                    color: $black;
+                    font-family: $font;
+                    cursor: pointer;
+                    transition: .3s;
+                    border-radius: 2px;
+                }
+            }
+        }
+        .addPanelBottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            @media only screen and (max-width: $breakpoint_md) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 10px 0;
+            }
+            .addSize_a {
+                @media only screen and (max-width: $breakpoint_md) {
+                    text-align: center;
+                }
+                a {
+                    transition: $transition;
+                    font-weight: bold;
+                    &:hover {
+                        color: $yellow;
+                        @media only screen and (max-width: $breakpoint_md) {
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+            .saveSize {
+                button {
+                    width: 200px;
+                    height: 40px;
+                    border: solid 2px $black;
+                    background: none;
+                    font-family: $font;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    color: $black;
+                    transition: .3s;
+                    cursor: pointer;
+                    @media only screen and (max-width: $breakpoint_md) {
+                        width: 100%;
+                        margin-top: 20px;
+                    }
+                    &:hover {
+                        border: solid 2px $blue;
+                        color: $blue;
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.div_flex_size {
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//}
+//.div_flex_i:hover {
+//    color: #ffee00;
+//}
+//.div_flex_i i {
+//    font-size: 20px;
+//    font-weight: bold;
+//    margin-left: 10px;
+//}
+//.basket_array a{
+//    font-size: 14px;
+//}
+
+
+
+
+//.size_grid {
+//    display: grid;
+//    grid-template-columns: repeat(4, 1fr);
+//    grid-auto-rows: minmax(10px, auto);
+//    grid-gap: 5px 10px;
+//    padding: 10px 0;
+//}
+//.size_font_size {
+//    font-size: 10px;
+//    line-height: 1;
+//}
+//.div_flex {
+//    position: relative;
+//}
+//.addSize_basket:hover {
+//    color: #ffee00;
+//}
+//.addSize_basket:hover:after {
+//    content: attr(data-name);
+//    position: absolute;
+//    width: 140px;
+//    left: 120px;
+//    bottom: 0;
+//    background: #fff;
+//    color: $black;
+//    text-align: center;
+//    font-family: $font;
+//    font-size: 14px;
+//    padding: 5px 5px;
+//    box-shadow: 5px 5px 20px 10px #eeeeee;
+//}
+//.addSize_basket i{
+//    font-size: 24px;
+//    color: #76a6fc;
+//    transition: .2s;
+//}
+//.addSize_basket i:hover {
+//    color: cornflowerblue;
+//}
