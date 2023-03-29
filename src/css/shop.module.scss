@@ -233,9 +233,9 @@ $breakpoint_sm: 576px;
         font-size: 28px;
         font-weight: bold;
         color: $black;
-        @media only screen and (max-width: $breakpoint_md) {
-            font-size: 20px;
-        }
+//         @media only screen and (max-width: $breakpoint_md) {
+//             font-size: 20px;
+//         }
     }
 }
 
